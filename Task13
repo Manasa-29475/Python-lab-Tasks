@@ -1,0 +1,13 @@
+# Import the required library
+import numpy as np
+
+# Simulate a random coin flip
+coin = np.random.choice(["Heads", "Tails"])
+
+# Simulate a random dice roll (values 1 to 6)
+dice = np.random.randint(1, 7)
+
+# Display the results
+print("---- Simulation Results ----")
+print("Coin Flip Result:", coin)
+print("Dice Roll Result:", dice)
