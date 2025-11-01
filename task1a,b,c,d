@@ -1,0 +1,46 @@
+a = int(input("enter total number of loaves per day\n"))
+r = 185 * a
+d = 0.6 * r
+t = 0.4 * r
+print("Regular Price ", r)
+print("Total Discount ", d)
+print("Total Amount to be paid ", t)
+
+cls = float(input("Enter temperature in Celsius: "))
+fah = (cls * 1.8) + 32
+print("%0.1f degrees Celsius is equal to %0.1f degrees Fahrenheit." % (cls, fah))
+
+import math
+def distance(x1, y1, z1, x2, y2, z2):
+    d = math.sqrt((x2 - x1)**2 + (y2 - y1)**2 + (z2 - z1)**2)
+    print("Distance is", d)
+x1 = float(input("Enter the X1-coordinate: "))
+y1 = float(input("Enter the Y1-coordinate: "))
+z1 = float(input("Enter the Z1-coordinate: "))
+x2 = float(input("Enter the X2-coordinate: "))
+y2 = float(input("Enter the Y2-coordinate: "))
+z2 = float(input("Enter the Z2-coordinate: "))
+distance(x1, y1, z1, x2, y2, z2)
+
+import math
+def equationroots(x, y, z):
+    discri = y * y - 4 * x * z
+    sqrtval = math.sqrt(abs(discri))
+    if discri > 0:
+        print("Roots are real and different")
+        print((-y + sqrtval) / (2 * x))
+        print((-y - sqrtval) / (2 * x))
+    elif discri == 0:
+        print("Roots are real and same")
+        print(-y / (2 * x))
+    else:
+        print("Roots are complex")
+        print(-y / (2 * x), "+ i", sqrtval)
+        print(-y / (2 * x), "- i", sqrtval)
+x = int(input("Enter a: "))
+y = int(input("Enter b: "))
+z = int(input("Enter c: "))
+if x == 0:
+    print("Input correct quadratic equation")
+else:
+    equationroots(x, y, z)
